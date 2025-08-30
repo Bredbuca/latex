@@ -1,0 +1,75 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{aligned-overset}
+\usepackage{bm}
+%\usepackage{subequation}
+%\usepackage{equation}
+\usepackage[left=3cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+\begin{document}
+	% 1. Media aritmética
+	
+	\begin{equation}
+		\bar{x} = \frac{1}{n} 
+	\displaystyle\sum_{i=1}^{n} x_i
+	\end{equation}
+	
+	
+\begin{center}
+		\textbf{2. Varianza muestral}
+\end{center}
+	
+	La varianza muestral es una medida de dispersión que indica cuánto se alejan, en promedio, los datos de una muestra respecto a su media. Se calcula como el promedio de los cuadrados de esas desviaciones, siguiendo esta formula:
+	\begin{equation}
+		s^2 = \frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2
+	\end{equation}
+	
+	
+	% 3. Desviación estándar
+	\[
+	s = \sqrt{\frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2}
+	\]
+	
+	% 4. Covarianza
+	\[
+	\textrm{Cov}(X,Y) = \frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})
+	\]
+	
+	% 5. Coeficiente de correlación de Pearson
+	\[
+	r = \frac{\text{Cov}(X,Y)}{s_X s_Y}
+	\]
+	
+	% 6. Estadístico t de Student
+	\[
+	t = \frac{\bar{x} - \mu_0}{s / \sqrt{n}}
+	\]
+	
+
+
+	
+\section{Alineando}
+\begin{align*}
+	f(x)\overset{\text{Def}}&=x+x\\
+	&=2x
+\end{align*}
+\section{Tabla}
+\begin{table}[H]
+	\centering
+	
+	\begin{tabular}{|c|c|c|}
+		\hline
+		N° & codigo                                       & letra                 \\ \hline
+		1  & $\verb|\alpha|$ & $\bm\alpha $\\ \hline
+		2&                                 $\verb|\beta|$     & $\bm\beta$                      \\ \hline
+		&                                              &                       \\ \hline
+	\end{tabular}
+	\caption{Alfabeto griego}
+	\label{tab:my-table}
+\end{table}
+\end{document}
+
+\section{Tarea}
+Del texto Mandelhall pasar a Latex el contenido de la pagina 189
