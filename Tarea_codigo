@@ -1,0 +1,120 @@
+# codigo de la Tarea
+
+
+\documentclass[12pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{array, booktabs, tabularx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+
+% Márgenes similares al libro
+\geometry{
+	top=2cm,
+	bottom=2cm,
+	inner=2cm,
+	outer=2cm
+}
+
+% Definir color azul cielo
+\definecolor{SkyBlue}{RGB}{135,206,235}
+
+% Estilo encabezado
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\textcolor{gray}{\small 5.2 LA DISTRIBUCIÓN BINOMIAL DE PROBABILIDAD \quad 189}}
+\renewcommand{\headrulewidth}{0pt}
+
+% Cajita para la tabla
+\newenvironment{tablacaja}{\begin{center}}{\end{center}}
+
+\begin{document}
+	
+	% =========================
+	% TABLA 5.1
+	% =========================
+	\noindent
+	\begin{tabularx}{\textwidth}{>{\raggedleft\arraybackslash}p{3cm} X}
+		\textcolor{SkyBlue}{\textbf{TABLA 5.1}}  
+		& {\large\textcolor{SkyBlue}{Parte de la tabla 1 del apéndice I para $n=5$}}\\[-4pt]
+		\multicolumn{2}{l}{\textcolor{SkyBlue}{\rule{\textwidth}{0.8pt}}} \\[-10pt]
+		
+		& \begin{tablacaja}
+			\renewcommand{\arraystretch}{1.25}
+			\begin{tabular}{c|ccccccccccccc|c}
+				\toprule
+				$k$ & .01 & .05 & .10 & .20 & .30 & .40 & .50 & .60 & .70 & .80 & .90 & .95 & .99 & $k$ \\
+				\midrule
+				0 & & & & & & & .010 & & & & & & & 0 \\
+				1 & & & & & & & .087 & & & & & & & 1 \\
+				2 & & & & & & & .317 & & & & & & & 2 \\
+				3 & & & & & & & .663 & & & & & & & 3 \\
+				4 & & & & & & & .922 & & & & & & & 4 \\
+				5 & & & & & & & 1.000 & & & & & & & 5 \\
+				\bottomrule
+			\end{tabular}
+		\end{tablacaja} \\[7pt]
+		
+		& \noindent\normalsize{Si la probabilidad que usted necesite calcular no está en esta forma, necesitará considerar una forma para reescribir su probabilidad y hacer uso de las tablas.} \\
+	\end{tabularx}
+	
+	\vspace{7pt}
+	
+	\enlargethispage{\baselineskip}
+	% =========================
+	% EJEMPLO 5.5
+	% =========================
+	\noindent
+	\begin{tabularx}{\textwidth}{>{\raggedleft\arraybackslash}p{3cm} X}
+		\textcolor{SkyBlue}{\textbf{EJEMPLO 5.5}} 
+		& {\normalsize\textcolor{Black}{ Use la tabla binomial acumulativa para $n = 5$ y $p = 6$ para hallar las probabilidades de 
+				estos eventos:\vspace{10pt}}}\\
+		
+		& {\normalsize\textcolor{Black}{1. Exactamente 3 éxitos.}}\\[3pt]
+		& {\normalsize\textcolor{Black}{2.Tres o mas éxitos}}\\[5pt]
+		
+		& {\large\textcolor{SkyBlue}{Solución}}\\[3pt]
+		& {\normalsize\textcolor{Black}{ 1. Si encuentra k  3 en la tabla 5.1, el valor en tabla es }}\\[3pt]
+		
+		& {\normalsize\textcolor{Black}{\[P(x \leq 3) \;+\; p(0) \;+\; p(1) \;+\; p(2) \;+\; p(3)\]}}\\[3pt]
+		
+		& {\normalsize\textcolor{Black}{Como usted desea sólo $P(x = 3)  p(3)$, debe restar la probabilidad no deseada:}}\\[3pt]
+		
+		& {\normalsize{\[P(x \leq 2)\;=\; p(0) \;+\; p(1) \;+\; p(2)\]}}\\[3pt]
+		
+		& {\normalsize{que se encuentra en la tabla $5.1$ con $k = 2.$ Entonces}}\\[3pt]
+		
+		& {\normalsize{
+				\[
+				\begin{aligned}
+					P(x=3) & = P(x\leq3) - P(x\leq2) \\
+					& = .663 - .317 \\
+					& = .346
+				\end{aligned}
+				\]}}\\[3pt]
+		& {\normalsize{2. Para hallar P(tres o más éxitos) $P(x \ge 3)$ usando la tabla $5.1$, se debe usar el complemento del evento de interés. Escriba}}\\[3pt]
+		
+		& {\normalsize{
+				\[
+				\begin{aligned}
+					P(x\ge 3) = 1- P(P<3) = 1- P(x\leq2)
+				\end{aligned}\]}}\\[3pt]
+		
+		&{\normalsize{Se puede hallar $P(x\leq 2)$ en la tabla $5.1$ con $k = 2$. Entonces}}\\[3pt]
+		
+		& {\normalsize{
+				\[
+				\begin{aligned}
+					P(x\ge 3) & = 1-P(x\leq2) \\
+					& = 1 - .317 = .683
+				\end{aligned}
+				\]}}\\[3pt]
+					
+		
+		
+	\end{tabularx}
+	
+\end{document}
